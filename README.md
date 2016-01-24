@@ -1,4 +1,4 @@
-Example of how to use doctrine orderable extension
+Symfony2 test project
 =========
 To set up the project
 - run: composer install
