@@ -1,0 +1,6 @@
+{{ form_start(form, { method: 'POST', action: path('post_new'), 'attr': {'novalidate': 'novalidate'} }) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.content) }}
+<button class="waves-effect waves-light btn" type="submit">Add</button>
+{{ form_end(form) }}

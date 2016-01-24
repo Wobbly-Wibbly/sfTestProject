@@ -3,11 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="{{ asset('bower_components/Materialize/dist/css/materialize.min.css') }}" rel="stylesheet">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block navbar %}
+            <nav>
+                <div class="nav-wrapper teal lighten-2">
+                    <a href="#" class="brand-logo center">Orderable Example</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    </ul>
+                </div>
+            </nav>
+        {% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+            <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+            <script src="{{ asset('bower_components/Materialize/dist/js/materialize.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

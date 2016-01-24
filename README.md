@@ -1,4 +1,9 @@
-orderable
+Example of how to use doctrine orderable extension
 =========
-A Symfony project created on January 23, 2016, 4:51 pm.
-"# symfonyOrderableExample" 
+To set up the project
+- run: composer install
+- run: npm install
+- run: bower install
+- run: php app/console doctrine:database:create
+- run: php app/console doctrine:migrations:migrate
+- run: php app/console doctrine:fixtures:load

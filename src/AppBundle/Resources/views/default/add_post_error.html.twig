@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'comment_form_error' %}
+
+{% block body %}
+    <div class="row"></div>
+    <div class="row">
+        <div class="col m2">
+            <a class="waves-effect green waves-light btn" href="{{ url('homepage') }}">Back</a>
+        </div>
+        <div class="col m10">
+            <h3>Form error</h3>
+            {{ form_errors(form.title) }}
+            {{ form_errors(form.content) }}
+        </div>
+    </div>
+{% endblock %}
